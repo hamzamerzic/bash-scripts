@@ -1,0 +1,2 @@
+@reboot $HOME/hydrate-notify.sh
+21 * * * * eval "export $(egrep -z DBUS_SESSION_BUS_ADDRESS /proc/$(pgrep -u $LOGNAME gnome-session)/environ)"; /usr/bin/notify-send "Notification" "Hydrate!" # Notify
